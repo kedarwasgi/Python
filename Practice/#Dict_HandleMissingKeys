@@ -1,0 +1,25 @@
+#Dict_HandleMissingKeys
+
+from collections import defaultdict
+d = {'a': 1}
+
+# get — safe access with default
+print(d.get('a', 0)) # 1
+print(d.get('z', 0)) # 0 (no KeyError)
+
+# setdefault — set if missing, return value
+d.setdefault('b', 99) # adds 'b':99 since 'b' absent
+d.setdefault('a', 0) # does NOT overwrite existing 'a'
+print(d) # {'a':1, 'b':99}
+
+# defaultdict — auto-initialise missing keys
+word_count = defaultdict(int) # default value: 0
+for word in 'the cat sat on the mat'.split():
+word_count[word] += 1 # no KeyError ever
+print(dict(word_count))
+
+# defaultdict with list — group items
+groups = defaultdict(list)
+groups['fruit'].append('apple')
+groups['fruit'].append('banana')
+print(dict(groups)) # {'fruit': ['apple', 'banana']}
