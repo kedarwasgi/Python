@@ -1,0 +1,21 @@
+#Dict_DictionaryComprehensions 
+
+A dict comprehension is a compact way to build dictionaries.
+
+Syntax:
+[expression for item in iterable if condition]
+
+# Map numbers to their squares if even
+
+squares_dict = {x: x**2 for x in range(10) if x % 2 == 0}
+print(squares_dict)  
+
+# Output: {0: 0, 2: 4, 4: 16, 6: 36, 8: 64}
+
+---------------------------------------------------------------
+
+Another example:
+
+d = {k: v.upper() for k, v in zip(keys, values) if isinstance(v, str)}
+
+
