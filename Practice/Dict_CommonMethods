@@ -1,0 +1,26 @@
+#Most used common methods in Dictionaries
+
+d = {'a': 1, 'b': 2, 'c': 3}
+
+print(d.keys()) # dict_keys(['a', 'b', 'c'])
+print(d.values()) # dict_values([1, 2, 3])
+print(d.items()) # dict_items([('a',1),('b',2),('c',3)])
+
+# Iterate keys
+for key in d: 
+  print(key) # a b c
+
+# Iterate values
+for val in d.values(): 
+  print(val) # 1 2 3
+
+# Iterate key-value pairs
+for key, val in d.items():
+  print(f'{key} -> {val}')
+
+# Convert to list
+keys_list = list(d.keys()) # ['a', 'b', 'c']
+
+# Check key existence
+print('a' in d) # True
+print('z' in d.values()) # False
