@@ -1,0 +1,27 @@
+#Most common string methods 
+
+s = ' Hello, World! '
+
+print(s.upper()) # ' HELLO, WORLD! '
+print(s.lower()) # ' hello, world! '
+
+print(s.strip()) # 'Hello, World!' (both ends)
+print(s.lstrip()) # 'Hello, World! ' (left only)
+print(s.rstrip()) # ' Hello, World!' (right only)
+
+# split — string to list
+words = 'apple,banana,cherry'.split(',') # by delimiter
+print(words) # ['apple', 'banana', 'cherry']
+
+# join — list to string
+print(' | '.join(words)) # apple | banana | cherry
+
+# replace
+print('hello world'.replace('world', 'Python')) # hello Python
+
+# count, find, startswith, endswith
+t = 'banana'
+print(t.count('a')) # 3
+print(t.find('na')) # 2 (first index, -1 if not found)
+print(t.startswith('ban')) # True
+print(t.endswith('ana')) # True
