@@ -1,0 +1,24 @@
+#Different ways of String Formating 
+
+name = 'Alice'
+score = 95.5
+
+# % formatting (old style)
+print('Name: %s, Score: %.1f' % (name, score))
+
+# .format() (Python 2.6+)
+print('Name: {}, Score: {:.1f}'.format(name, score))
+print('Name: {n}, Score: {s:.1f}'.format(n=name, s=score))
+
+# f-strings (Python 3.6+ — recommended)
+print(f'Name: {name}, Score: {score:.1f}')
+
+# f-strings support expressions
+x = 7
+print(f'{x} squared is {x**2}')
+print(f'Upper: {name.upper()}')
+
+# Format specifiers
+pi = 3.14159
+print(f'{pi:.2f}') # 3.14 (2 decimal places)
+print(f'{1000000:,}') # 1,000,000 (thousands sep)
