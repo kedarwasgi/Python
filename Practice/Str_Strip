@@ -1,0 +1,28 @@
+# Default strip — whitespace
+s = ' hello world '
+print(repr(s.strip())) # 'hello world'
+
+# Custom characters (removes ANY char in the given string)
+s2 = '***hello***'
+print(s2.strip('*')) # hello
+s3 = '##--hello--##'
+print(s3.strip('#-')) # hello
+
+# lstrip / rstrip
+s4 = '000123000'
+print(s4.lstrip('0')) # 123000 (left only)
+print(s4.rstrip('0')) # 000123 (right only)
+
+# encode / decode
+
+'''
+The encode() method converts a string into bytes using a character encoding (UTF-8 by default).
+
+The decode() method converts bytes back into a string.
+'''
+
+text = 'Hello'
+encoded = text.encode('utf-8') # b'Hello'
+print(type(encoded)) # <class 'bytes'>
+decoded = encoded.decode('utf-8')# 'Hello'
+print(decoded == text) # True
