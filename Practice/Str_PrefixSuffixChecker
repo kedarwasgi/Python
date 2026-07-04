@@ -1,0 +1,23 @@
+#How do you use the 'in' operator, startswith, endswith with strings? Show
+multiple prefix/suffix checks.
+
+url = 'https://www.example.com/page'
+
+# in — substring check
+print('example' in url) # True
+print('google' in url) # False
+
+# startswith / endswith
+print(url.startswith('https')) # True
+print(url.endswith('.com')) # False (has /page)
+print(url.endswith('/page')) # True
+
+# Tuple of prefixes/suffixes — very useful!
+files = ['doc.pdf', 'img.png', 'data.csv', 'report.docx']
+images = [f for f in files if f.endswith(('.png','.jpg','.gif'))]
+print(images) # ['img.png']
+
+# Check if URL is secure
+urls = ['https://safe.com', 'http://old.com', 'ftp://legacy.org']
+secure = [u for u in urls if u.startswith(('https://', 'ftps://'))]
+print(secure) # ['https://safe.com']
