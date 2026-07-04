@@ -1,0 +1,28 @@
+#String Alignment 
+
+# zfill — zero-pad on the left
+print('42'.zfill(6)) # 000042
+print('3.14'.zfill(8)) # 00003.14
+print('-5'.zfill(5)) # -0005 (sign preserved!)
+
+# ljust — left-align in width
+print('hello'.ljust(10)) # 'hello '
+print('hello'.ljust(10,'*')) # 'hello*****'
+
+# rjust — right-align in width
+print('hello'.rjust(10)) # ' hello'
+print('42'.rjust(6, '0')) # '000042'
+
+# center
+print('hello'.center(11)) # ' hello '
+print('hello'.center(11,'-'))# '---hello---'
+
+# Practical: print a formatted table
+
+data = [('Alice', 85), ('Bob', 92), ('Carol', 78)]
+
+print(f"{'Name':<10} {'Score':>6}")
+print('-' * 17)
+
+for name, score in data:
+    print(f"{name:<10} {score:>6}")
