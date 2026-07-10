@@ -1,0 +1,55 @@
+#Convert Set into Tuple
+
+Example 1: convert set into tuple.
+
+#   program to convert set to tuple
+# create set
+s = {'a', 'b', 'c', 'd', 'e'}
+
+# print set
+print(type(s), " ", s)
+
+# call tuple() method 
+# this method convert set to tuple
+t = tuple(s)
+
+# print tuple
+print(type(t), " ", t)
+
+————————————————————
+
+Method2: Using list comprehension
+
+s = {'a', 'b', 'c', 'd', 'e'} 
+x=[i for i in s]
+print(tuple(x))
+
+————————————————————
+
+Method #3: Using the += operator
+
+s = {'a', 'b', 'c', 'd', 'e'}
+
+# initialize an empty tuple
+t = tuple()
+
+# loop through each element in the set s
+for i in s:
+    # create a one-element tuple with the current element i and concatenate it to t
+    t += (i,)
+
+# print the resulting tuple
+print(t)
+
+————————————————————
+
+Method #4:Using itertools library's tuple() function.
+
+import itertools
+#initializing set
+s = {'a', 'b', 'c', 'd', 'e'}
+t = tuple(itertools.chain(s))
+# print the resulting tuple
+
+print(t)
+
