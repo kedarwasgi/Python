@@ -1,0 +1,28 @@
+'''
+find() returns -1 if substring not found. index() raises ValueError. Both return the first occurrence index.
+replace() returns a new string with substitutions.
+'''
+
+
+s = 'banana'
+
+# find — returns -1 if not found (safe)
+print(s.find('na')) # 2 (first 'na' at index 2)
+print(s.find('na', 3)) # 4 (search from index 3)
+print(s.find('xyz')) # -1 (not found, no error)
+
+# index — raises ValueError if not found
+print(s.index('na')) # 2
+try:
+s.index('xyz') # ValueError!
+except ValueError as e:
+print(e) # substring not found
+
+# count — occurrences
+print(s.count('a')) # 3
+print(s.count('na')) # 2
+
+# replace(old, new, count)
+t = 'aabbccaabb'
+print(t.replace('aa', 'XX')) # XXbbccXXbb
+print(t.replace('aa', 'XX', 1)) # XXbbccaabb (first only)
