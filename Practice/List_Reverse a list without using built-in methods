@@ -1,0 +1,13 @@
+#Reverse a list without using built-in methods:
+
+def list_reversal(lst):
+    n = len(lst)
+    rev_lst = []
+    for i in range(n-1,-1,-1):
+        rev_lst.append(lst[i])
+
+    return rev_lst
+
+lst = [1,2,4,3,5,6,7,9,8,0,15]
+
+print(list_reversal(lst))
